@@ -7,7 +7,6 @@ public class Clerk extends Person {
         super(name);
     }
 
-
     public int getCashBox() {
         return cashBox;
     }

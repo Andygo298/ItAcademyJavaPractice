@@ -1,22 +1,10 @@
 package Week1Task4;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class MergeLists {
-
-    void mergeStream(List<Integer> firstList, List<Integer> secondList) {
-        firstList = Stream.concat(firstList.stream(), secondList.stream())
-                .distinct()
-                .sorted()
-                .collect(Collectors.toList());
-        firstList.forEach(x -> System.out.printf("%s ", x));
-        System.out.println();
-        secondList.forEach(x -> System.out.printf("%s ", x));
-    }
 
     void merge(List<Integer> firstList, List<Integer> secondList) {
 
@@ -35,6 +23,15 @@ public class MergeLists {
         System.out.println("FIRST:");
         firstList.forEach(x -> System.out.printf("%s ", x));
         System.out.println("\nSECOND:");
+        secondList.forEach(x -> System.out.printf("%s ", x));
+    }
+
+    void mergeStream(List<Integer> firstList, List<Integer> secondList) {
+        firstList = Stream.concat(firstList.stream(), secondList.stream())
+                .sorted()
+                .collect(Collectors.toList());
+        firstList.forEach(x -> System.out.printf("%s ", x));
+        System.out.println();
         secondList.forEach(x -> System.out.printf("%s ", x));
     }
 }

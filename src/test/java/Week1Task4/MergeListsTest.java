@@ -11,9 +11,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class MergeListsTest {
 
     @Test
-    void merge() {
+    void mergeTest() {
         List<Integer> first = new ArrayList<>(Arrays.asList(1,5,10,16,20));
-        List<Integer> second = new ArrayList<>(Arrays.asList(2,6,19));
+        List<Integer> second = new ArrayList<>(Arrays.asList(2,6,10,19));
         MergeLists mergeLists = new MergeLists();
         mergeLists.merge(first,second);
     }

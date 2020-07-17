@@ -11,10 +11,6 @@ public class Buyer extends Person {
         return money;
     }
 
-    public void setMoney(int money) {
-        this.money = money;
-    }
-
     private int calcRandomBanknote() {
         int[] banknote = new int[]{25, 50, 100};
         return banknote[(int) Math.floor(Math.random() * banknote.length)];
