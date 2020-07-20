@@ -31,11 +31,12 @@ public class Dominant {
                 integerMap.put(i, integerMap.get(i) + 1);
             }
         }
-        return integerMap.entrySet()
-                .stream()
-                .filter(entry -> Collections.max(integerMap.values()).equals(entry.getValue()))
+        Integer maxValue = Collections.max(integerMap.values());
+        return integerMap.entrySet().stream()
+                .filter(entry -> maxValue.equals(entry.getValue()))
                 .map(Map.Entry::getKey)
                 .findFirst()
-                .get();
+                .orElse(null);
+
     }
 }
