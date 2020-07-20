@@ -17,8 +17,12 @@ public class Anagrams {
 
     public List<List<String>> toSortedAnagramsLists(List<String> strings) {
         for (String element : strings) {
-            List<Character> chars = element.chars().mapToObj(e -> (char) e).sorted().collect(Collectors.toList());
-            String sortedString = StringUtils.join(chars,"");
+            List<Character> chars = element.chars()
+                    .mapToObj(e -> (char) e)
+                    .sorted()
+                    .collect(Collectors.toList());
+
+            String sortedString = StringUtils.join(chars, "");
 
             if (stringMap.containsKey(sortedString)) {
                 List<String> getStrings = stringMap.get(sortedString);
@@ -31,4 +35,5 @@ public class Anagrams {
         lists.forEach(Collections::sort);
         return lists;
     }
+
 }

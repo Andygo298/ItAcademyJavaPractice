@@ -7,12 +7,12 @@ import static org.junit.jupiter.api.Assertions.*;
 class BracersTest {
 
     private Bracers bracers = new Bracers();
-    private String exampleOne = "";
-    private String exampleTwo = "()";
-    private String exampleThree = "(){}[]";
-    private String exampleFour = "(]";
-    private String exampleFive = "([)]";
-    private String exampleSix = "{[]}";
+    private final String exampleOne = "";
+    private final String exampleTwo = "()";
+    private final String exampleThree = "(){}[]";
+    private final String exampleFour = "(]";
+    private final String exampleFive = "([)]";
+    private final String exampleSix = "{[]}";
 
     @Test
     void isCorrectTest() {
