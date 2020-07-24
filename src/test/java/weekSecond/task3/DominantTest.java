@@ -17,9 +17,9 @@ class DominantTest {
 
     @Test
     void getDominantTest() {
-        Integer expected1 = 9;
-        Integer expected2 = 3;
-        Integer expected3 = 2;
+        final Integer expected1 = 9;
+        final Integer expected2 = 3;
+        final Integer expected3 = 2;
 
         long start1 = System.nanoTime();
         Integer actualDominant1 = dominant.get(arr1);
